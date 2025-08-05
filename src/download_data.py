@@ -19,16 +19,12 @@ def download_data(tickers, start_date, end_date, filepath):
     print(f"Data downloaded and saved to {filepath}")
 
 if __name__ == "__main__":
-    # Define the tickers and the date range
     TICKERS = ['SPY', 'GLD']
     START_DATE = '2000-01-01'
     END_DATE = pd.to_datetime('today').strftime('%Y-%m-%d')
 
-    # Define the output file path
     OUTPUT_FILEPATH = os.path.join('data', 'spy_gld.csv')
 
-    # Create the data directory if it doesn't exist
     os.makedirs(os.path.dirname(OUTPUT_FILEPATH), exist_ok=True)
 
-    # Download the data
     download_data(TICKERS, START_DATE, END_DATE, OUTPUT_FILEPATH)
