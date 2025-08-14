@@ -1,2 +1,6 @@
 pandas
 yfinance
+numpy 
+matplotlib 
+hmmlearn 
+scikit-learn
